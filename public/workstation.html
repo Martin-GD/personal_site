@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1748d6" />
+    <title>Gongmingdao · 工位数据</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="返回个人主页"><span class="brand-mark">&gt;_</span><span>gongmingdao</span></a>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="/">个人主页</a>
+          <a href="/#work">研究成果</a>
+          <a href="#activity">活动</a>
+        </nav>
+        <span class="header-status"><i></i> working locally</span>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section id="overview" class="profile-layout">
+        <aside class="profile-sidebar">
+          <div class="avatar" aria-hidden="true">GMD</div>
+          <h1>Gongmingdao</h1>
+          <p class="handle">@gongmingdao</p>
+          <p class="bio">机器学习研究 · 视觉计算 · 实验自动化</p>
+          <a class="follow-button" href="#repositories">查看项目</a>
+          <div class="profile-meta">
+            <span><b class="meta-symbol">⌂</b> imed01 / lab</span>
+            <span><b class="meta-symbol">⌁</b> 数据持续更新中</span>
+            <span><b class="meta-symbol">◷</b> Asia / Shanghai</span>
+          </div>
+          <div class="profile-note">
+            <span class="note-label">CURRENT FOCUS</span>
+            <strong>把研究、工具和日常数据连成一个可观察的系统。</strong>
+          </div>
+        </aside>
+
+        <div class="profile-content">
+          <div class="page-intro">
+            <div>
+              <p class="eyebrow">PERSONAL WORKSPACE</p>
+              <h2>你好，这里是我的工作台。</h2>
+              <p>记录正在进行的项目，也记录每天真实发生的节奏。</p>
+            </div>
+            <div class="availability"><span></span> open to ideas</div>
+          </div>
+
+          <section class="readme-panel" aria-label="个人简介">
+            <div class="panel-label"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span>README.md</span></div>
+            <div class="readme-body">
+              <p class="code-comment"># welcome to my workspace</p>
+              <p><span class="code-keyword">const</span> <span class="code-name">gmd</span> = {</p>
+              <p class="code-indent"><span class="code-key">role</span>: <span class="code-string">"researcher & builder"</span>,</p>
+              <p class="code-indent"><span class="code-key">interests</span>: [<span class="code-string">"vision"</span>, <span class="code-string">"automation"</span>, <span class="code-string">"useful data"</span>],</p>
+              <p class="code-indent"><span class="code-key">principle</span>: <span class="code-string">"make the invisible observable"</span></p>
+              <p>};</p>
+            </div>
+          </section>
+
+          <section class="stats-strip" aria-label="空间统计">
+            <div><span>REPOSITORIES</span><strong>03</strong></div>
+            <div><span>ACTIVE DAYS</span><strong id="statActiveDays">--</strong></div>
+            <div><span>RECORDED TIME</span><strong id="statTotalHours">--</strong></div>
+            <div><span>LAST SYNC</span><strong id="statLastDate">--</strong></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="repositories" class="section-block">
+        <div class="section-heading">
+          <div><span class="eyebrow">SELECTED WORK</span><h2>置顶项目</h2></div>
+          <span class="section-count">3 repositories</span>
+        </div>
+        <div class="repo-grid">
+          <article class="repo-card repo-featured">
+            <div class="repo-card-top"><span class="repo-icon">◒</span><span class="repo-visibility">PUBLIC</span></div>
+            <h3>SuperRetina</h3>
+            <p>面向视觉特征与匹配实验的研究代码，持续迭代训练流程。</p>
+            <div class="repo-footer"><span><i class="language-dot python"></i> Python</span><span>research</span><span>vision</span></div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-card-top"><span class="repo-icon">⌁</span><span class="repo-visibility">PUBLIC</span></div>
+            <h3>mi-fitness-mcp-cn</h3>
+            <p>把运动与健康数据接进可查询、可复用的本地工具链。</p>
+            <div class="repo-footer"><span><i class="language-dot python"></i> Python</span><span>data</span><span>mcp</span></div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-card-top"><span class="repo-icon">▦</span><span class="repo-visibility">PRIVATE</span></div>
+            <h3>workstation-observer</h3>
+            <p>用工位检测器记录每日在席时间，并把原始状态变成可读的趋势。</p>
+            <div class="repo-footer"><span><i class="language-dot javascript"></i> JavaScript</span><span>dashboard</span><span id="repoDataState">json storage</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="activity" class="section-block activity-section">
+        <div class="section-heading">
+          <div><span class="eyebrow">CONTRIBUTION GRAPH</span><h2>最近的工作节奏</h2></div>
+          <span id="dataStatus" class="data-status">正在读取数据...</span>
+        </div>
+        <div class="workstation-controls" aria-label="工位时间筛选">
+          <div class="control-group range-control">
+            <span class="control-label">选择时间范围</span>
+            <div class="date-inputs">
+              <label><span>从</span><input id="rangeStart" type="date" /></label>
+              <span class="date-divider">至</span>
+              <label><span>到</span><input id="rangeEnd" type="date" /></label>
+            </div>
+            <div class="quick-range" role="group" aria-label="快速选择时间范围">
+              <button type="button" data-range="7">近 7 天</button>
+              <button type="button" data-range="30">近 30 天</button>
+              <button type="button" data-range="all">全部</button>
+            </div>
+          </div>
+          <div class="control-group day-control">
+            <span class="control-label">查看某一天</span>
+            <label class="day-select-wrap"><span>日期</span><select id="daySelect" aria-label="选择某一天"></select></label>
+            <span id="selectedRangeLabel" class="selected-range-label">--</span>
+          </div>
+        </div>
+        <div class="activity-grid">
+          <div class="contribution-panel">
+            <div class="contribution-head"><span id="contributionSummary">工位检测器记录</span><span>Less <i class="heat heat-0"></i><i class="heat heat-1"></i><i class="heat heat-2"></i><i class="heat heat-3"></i><i class="heat heat-4"></i> More</span></div>
+            <div id="heatmap" class="heatmap" aria-label="工位记录热力图"></div>
+            <div class="heatmap-legend"><span>数据来自本地 JSON 文件</span><span id="heatmapRange">--</span></div>
+          </div>
+          <div class="activity-aside">
+            <div class="mini-metric"><span>平均每天</span><strong id="statAverage">--</strong><small>在席时间</small></div>
+            <div class="mini-metric"><span>最长一天</span><strong id="statLongest">--</strong><small id="statLongestDate">--</small></div>
+            <div class="mini-metric"><span>当前存储</span><strong>JSON</strong><small>MongoDB later</small></div>
+          </div>
+        </div>
+        <div class="workstation-analytics">
+          <article class="analytics-card daily-card">
+            <div class="analytics-heading"><div><span class="card-kicker">DAILY HOURS</span><h3>每日在席时长</h3></div><span class="chart-note">最近 14 天</span></div>
+            <div id="dailyBars" class="daily-bars" aria-label="每日在席时长柱状图"></div>
+          </article>
+          <article class="analytics-card weekday-card">
+            <div class="analytics-heading"><div><span class="card-kicker">WEEKDAY RHYTHM</span><h3>星期平均</h3></div><span class="chart-note">平均小时</span></div>
+            <div id="weekdayBars" class="weekday-bars" aria-label="星期平均在席时长"></div>
+          </article>
+          <article class="analytics-card time-card">
+            <div class="analytics-heading"><div><span class="card-kicker">TIME OF DAY</span><h3>时段密度</h3></div><span class="chart-note">按小时累计</span></div>
+            <div id="timeDistribution" class="time-distribution" aria-label="每天各小时在席密度"></div>
+            <div class="time-axis"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+          </article>
+          <article class="analytics-card duration-card">
+            <div class="analytics-heading"><div><span class="card-kicker">DURATION MIX</span><h3>单日时长分布</h3></div><span class="chart-note">天数</span></div>
+            <div id="durationBuckets" class="duration-buckets" aria-label="单日时长分布"></div>
+          </article>
+        </div>
+        <div id="workstationInsights" class="workstation-insights" aria-label="工位数据观察"></div>
+        <section class="day-detail-panel" aria-label="单日工位时间详情">
+          <div class="day-detail-heading">
+            <div><span class="card-kicker">DAY INSPECTOR</span><h3 id="dayDetailTitle">当天在席分布</h3></div>
+            <span id="dayDetailState" class="day-detail-state">请选择日期</span>
+          </div>
+          <div class="day-detail-summary">
+            <div><span>总时长</span><strong id="dayTotal">--</strong></div>
+            <div><span>激活段数</span><strong id="daySegments">--</strong></div>
+            <div><span>首段开始</span><strong id="dayFirstStart">--</strong></div>
+            <div><span>末段结束</span><strong id="dayLastEnd">--</strong></div>
+          </div>
+          <div class="day-timeline-shell">
+            <div class="day-timeline-labels"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+            <div id="dayTimeline" class="day-timeline" aria-label="当天 24 小时在席时间轴"></div>
+          </div>
+          <div id="dayIntervals" class="day-intervals"></div>
+        </section>
+      </section>
+
+      <section class="section-block recent-section">
+        <div class="section-heading"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>最近记录</h2></div><span class="section-count">from workstation detector</span></div>
+        <div id="recentActivity" class="activity-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>built with Node.js · data stays local</span><span>© <span id="year"></span> gongmingdao</span></footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

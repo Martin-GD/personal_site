@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+
+# Keep local presence records and credentials out of the repository.
+ha_workstation_daily_duration*.json
+credentials*.json
+*.pem
+*.key
