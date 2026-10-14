@@ -11,19 +11,37 @@ import { Pattern } from "../vectors/pattern"
 import { GMark } from "../vectors/g-mark"
 import { MenuLine } from "../vectors/menu-line"
 import { menuList, socialMediaList } from "@/app/constants"
-import { BrandRalphLauren } from "@/app/components/common/vectors/brands/brand-ralph-lauren"
-import { BrandMonster } from "@/app/components/common/vectors/brands/brand-monster"
-import { BrandMind } from "@/app/components/common/vectors/brands/brand-mind"
-import { BrandUber } from "@/app/components/common/vectors/brands/brand-uber"
-import { BrandPlaystation } from "@/app/components/common/vectors/brands/brand-playstation"
-import { BrandGoogle } from "@/app/components/common/vectors/brands/brand-google"
-import { BrandAndroid } from "@/app/components/common/vectors/brands/brand-android"
-import { BrandQuadrant } from "@/app/components/common/vectors/brands/brand-quadrant"
-import { BrandInKart } from "@/app/components/common/vectors/brands/brand-in-kart"
-import { BrandPureEletric } from "@/app/components/common/vectors/brands/brand-pure-eletric"
-import { BrandTumi } from "@/app/components/common/vectors/brands/brand-tumi"
-import { BrandHilton } from "@/app/components/common/vectors/brands/brand-hilton"
 gsap.registerPlugin(ScrollTrigger)
+
+const publicationMarks = [
+  { id: "cvpr", code: "CVPR", detail: "computer vision", variant: "vision" },
+  { id: "iclr", code: "ICLR", detail: "learning representations", variant: "learning" },
+  { id: "iccv", code: "ICCV", detail: "international vision", variant: "vision" },
+  { id: "neurips", code: "NeurIPS", detail: "neural information", variant: "learning" },
+  { id: "tmi", code: "IEEE TMI", detail: "medical imaging", variant: "medical" },
+  { id: "tip", code: "TIP", detail: "image processing", variant: "processing" },
+  { id: "tpami", code: "TPAMI", detail: "pattern analysis", variant: "analysis" },
+  { id: "media", code: "MedIA", detail: "medical image analysis", variant: "medical" },
+  { id: "aaai", code: "AAAI", detail: "artificial intelligence", variant: "learning" },
+  { id: "jbhi", code: "JBHI", detail: "biomedical informatics", variant: "medical" },
+  { id: "cmig", code: "CMIG", detail: "medical imaging graphics", variant: "medical" },
+  { id: "tai", code: "TAI", detail: "artificial intelligence", variant: "analysis" }
+] as const
+
+const PublicationMarks = () => (
+  <>
+    {publicationMarks.map(mark => (
+      <div
+        key={mark.id}
+        className={`publication-mark publication-mark-${mark.variant}`}
+        aria-label={`${mark.code}, ${mark.detail}`}
+      >
+        <span className="publication-mark-code">{mark.code}</span>
+        <span className="publication-mark-detail">{mark.detail}</span>
+      </div>
+    ))}
+  </>
+)
 
 export const Footer = () => {
   const marqueeRef = useRef<HTMLDivElement>(null)
@@ -251,32 +269,10 @@ export const Footer = () => {
                 ref={contentRef}
                 className="flex items-center gap-12 md:gap-16 2xl:gap-20 pr-20 scale-50 md:scale-75 lg:scale-100"
               >
-                <BrandRalphLauren width="200" height="100" fill="var(--color-accent)" />
-                <BrandMonster width="200" height="100" fill="var(--color-accent)" />
-                <BrandUber width="140" height="100" fill="var(--color-accent)" />
-                <BrandMind width="140" height="100" fill="var(--color-accent)" />
-                <BrandPlaystation width="60" height="60" fill="var(--color-accent)" />
-                <BrandGoogle width="140" height="60" fill="var(--color-accent)" />
-                <BrandAndroid width="140" height="60" fill="var(--color-accent)" />
-                <BrandQuadrant width="220" height="60" fill="var(--color-accent)" />
-                <BrandInKart width="100" height="60" fill="var(--color-accent)" />
-                <BrandPureEletric width="110" height="80" fill="var(--color-accent)" />
-                <BrandTumi width="140" height="80" fill="var(--color-accent)" />
-                <BrandHilton width="140" height="100" fill="var(--color-accent)" />
+                <PublicationMarks />
               </div>
               <div className="flex items-center gap-12 md:gap-16 2xl:gap-20 pr-20">
-                <BrandRalphLauren width="200" height="100" fill="var(--color-accent)" />
-                <BrandMonster width="200" height="100" fill="var(--color-accent)" />
-                <BrandUber width="140" height="100" fill="var(--color-accent)" />
-                <BrandMind width="140" height="100" fill="var(--color-accent)" />
-                <BrandPlaystation width="60" height="60" fill="var(--color-accent)" />
-                <BrandGoogle width="140" height="60" fill="var(--color-accent)" />
-                <BrandAndroid width="140" height="60" fill="var(--color-accent)" />
-                <BrandQuadrant width="220" height="60" fill="var(--color-accent)" />
-                <BrandInKart width="100" height="60" fill="var(--color-accent)" />
-                <BrandPureEletric width="110" height="80" fill="var(--color-accent)" />
-                <BrandTumi width="140" height="80" fill="var(--color-accent)" />
-                <BrandHilton width="140" height="100" fill="var(--color-accent)" />
+                <PublicationMarks />
               </div>
             </div>
           </div>

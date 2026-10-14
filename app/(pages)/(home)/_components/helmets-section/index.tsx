@@ -1,18 +1,73 @@
 "use client"
-import { useState } from "react"
+
+import { useEffect, useMemo, useState } from "react"
 import Image from "next/image"
-import clsx from "clsx"
+
 import { Grid } from "@/app/components/common/vectors/grid"
 import { Pattern } from "@/app/components/common/vectors/pattern"
-import { helmetsList } from "@/app/constants"
+
+interface FootprintVisit {
+  id: string
+  city: string
+  province: string
+  date: string
+  image: string
+  coordinates: [number, number]
+}
+
+interface FootprintData {
+  visits: FootprintVisit[]
+}
+
+const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+  timeZone: "Asia/Shanghai"
+}).format(new Date(`${date}T12:00:00+08:00`))
 
 export const HelmetsSection = () => {
-  const [activeId, setActiveId] = useState<number | null>(null)
+  const [visits, setVisits] = useState<FootprintVisit[]>([])
+  const [selectedYear, setSelectedYear] = useState("2026")
+  const [activeId, setActiveId] = useState<string | null>(null)
+  const [dataState, setDataState] = useState<"loading" | "ready" | "error">("loading")
+
+  useEffect(() => {
+    let cancelled = false
+
+    fetch("/data/china_footprints_2026.json", { cache: "no-store" })
+      .then(response => {
+        if (!response.ok) throw new Error("Unable to load city archive.")
+        return response.json() as Promise<FootprintData>
+      })
+      .then(data => {
+        if (cancelled) return
+        setVisits(data.visits)
+        setDataState("ready")
+      })
+      .catch(() => {
+        if (!cancelled) setDataState("error")
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const years = useMemo(
+    () => [...new Set(visits.map(visit => visit.date.slice(0, 4)))].sort((left, right) => right.localeCompare(left)),
+    [visits]
+  )
+
+  const filteredVisits = useMemo(
+    () => visits.filter(visit => selectedYear === "all" || visit.date.startsWith(selectedYear)),
+    [selectedYear, visits]
+  )
 
   return (
     <section
       id="helmets"
-      className="mt-0 mb-30 w-full bg-white overflow-hidden"
+      className="city-archive-section mt-0 mb-30 w-full bg-white overflow-hidden"
       onClick={() => setActiveId(null)}
     >
       <div className="relative py-10 lg:py-40 px-5">
@@ -22,59 +77,78 @@ export const HelmetsSection = () => {
         <div className="md:hidden absolute left-0 top-0 w-full h-full">
           <Pattern height="40%" stroke="var(--color-line)" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
-          {helmetsList.map((helmet) => {
-            const isActive = activeId === helmet.id
-            return (
-              <div
-                key={helmet.id}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setActiveId(isActive ? null : helmet.id)
+
+        <div className="city-archive-toolbar relative z-10">
+          <div>
+            <span className="city-archive-kicker">CITY ARCHIVE</span>
+            <strong>{selectedYear === "all" ? "ALL PLACES" : selectedYear}</strong>
+          </div>
+          <div className="city-archive-filters" role="group" aria-label="Filter city archive by year">
+            <button
+              type="button"
+              className={selectedYear === "all" ? "is-selected" : ""}
+              onClick={() => {
+                setSelectedYear("all")
+                setActiveId(null)
+              }}
+              aria-pressed={selectedYear === "all"}
+            >
+              ALL
+            </button>
+            {years.map(year => (
+              <button
+                type="button"
+                className={selectedYear === year ? "is-selected" : ""}
+                key={year}
+                onClick={() => {
+                  setSelectedYear(year)
+                  setActiveId(null)
                 }}
-                className="group relative xl:even:translate-y-40 overflow-hidden cursor-pointer"
+                aria-pressed={selectedYear === year}
               >
-                <div className="relative overflow-hidden z-10">
-                  <div className="hidden md:block">
-                    <Grid width="100%" height="100%" stroke="var(--color-line)" />
-                  </div>
-                  <div className="md:hidden">
-                    <Grid width="100%" height="100%" stroke="var(--color-line)" />
-                  </div>
+                {year}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="city-archive-grid relative z-10">
+          {dataState === "loading" ? <p className="city-archive-status">LOADING CITY ARCHIVE</p> : null}
+          {dataState === "error" ? <p className="city-archive-status">CITY ARCHIVE UNAVAILABLE</p> : null}
+          {dataState === "ready" && filteredVisits.length === 0 ? <p className="city-archive-status">NO CITIES IN THIS FILTER</p> : null}
+          {filteredVisits.map((visit, index) => {
+            const visitKey = `${visit.id}-${visit.date}-${index}`
+            const isActive = activeId === visitKey
+            return (
+              <article
+                key={visitKey}
+                className={`city-archive-card ${index % 2 === 1 ? "city-archive-card-offset" : ""} ${isActive ? "is-active" : ""}`}
+                onClick={event => {
+                  event.stopPropagation()
+                  setActiveId(isActive ? null : visitKey)
+                }}
+              >
+                <div className="city-archive-card-grid" aria-hidden="true">
+                  <Grid width="100%" height="100%" stroke="var(--color-line)" />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src={helmet.image}
-                    width={500}
-                    height={500}
-                    alt={helmet.label}
-                    className="object-contain"
-                  />
-                </div>
-                <div
-                  className={clsx(
-                    "absolute inset-0 transition-all duration-500 format rounded-lg overflow-hidden z-20",
-                    "h-0 group-hover:h-full",
-                    isActive && "h-full"
+                <div className="city-archive-city">{visit.city}</div>
+                <div className="city-archive-photo" aria-hidden={!isActive}>
+                  {visit.image ? (
+                    <Image
+                      src={visit.image}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                      alt={`${visit.city} landmark`}
+                      className="city-archive-photo-image"
+                    />
+                  ) : (
+                    <span className="city-archive-photo-placeholder">PHOTO / PLACEHOLDER</span>
                   )}
-                >
-                  <Image
-                    src={helmet.imageHover}
-                    width={500}
-                    height={500}
-                    alt={helmet.label}
-                    className="object-contain"
-                  />
+                  <span className="city-archive-photo-shade" />
+                  <strong>{visit.city}</strong>
                 </div>
-                <div className="absolute bottom-0 right-0 z-30 p-2">
-                  <p className="font-sans text-sm 2xl:text-base font-bold text-black">
-                    {helmet.label}
-                    <strong className="ml-1 text-default">
-                      {helmet.year}
-                    </strong>
-                  </p>
-                </div>
-              </div>
+                <time className="city-archive-date" dateTime={visit.date}>{formatDate(visit.date)}</time>
+              </article>
             )
           })}
         </div>
