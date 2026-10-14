@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react"
 import { useMenuStore } from "@/app/store"
 import { Pattern } from "../vectors/pattern"
 import { MenuLine } from "../vectors/menu-line"
-import { Signature } from "../vectors/signature"
+import { GMark } from "../vectors/g-mark"
 import { menuList, socialMediaList } from "@/app/constants"
 
 export const Menu = () => {
@@ -186,19 +186,19 @@ export const Menu = () => {
   }, [])
 
   return (
-    <div className={clsx(
-      "menu fixed top-0 left-0 md:px-10 w-full h-dvh bg-musgo transition-transform duration-700 overflow-hidden z-99",
+    <div id="site-menu" inert={!open} aria-hidden={!open} className={clsx(
+      "menu fixed top-0 left-0 md:px-10 w-full h-dvh bg-default transition-transform duration-700 overflow-hidden z-99",
       open ? "translate-y-0" : "-translate-y-full"
     )}>
       <div className="relative w-full h-full">
         <div className="hidden md:block absolute top-0 left-0 w-full h-full">
-          <Pattern width="100%" stroke="#363b24" />
+          <Pattern width="100%" stroke="#3865df" />
         </div>
         <div className="md:hidden absolute top-0 left-0 w-full h-full opacity-15">
           <Pattern height="100dvh" stroke="#fff" />
         </div>
         <div className="absolute left-1/2 -translate-x-1/2 lg:left-5 lg:translate-x-0 -rotate-12 lg bottom-5 lg:bottom-4 z-99">
-          <Signature width="300" height="120" color="#d2ff00" />
+          <GMark width="104" height="104" className="text-white" />
         </div>
         <div className="absolute w-full h-full flex items-center z-50">
           <div className="hidden lg:flex gap-17 lg:gap-0 xl:gap-18 w-1/2">
@@ -259,15 +259,15 @@ export const Menu = () => {
                   >
                     <Link
                       href={item.pathname}
-                      target="_blank"
+                      target={item.pathname.startsWith("http") ? "_blank" : undefined}
                       className={clsx(
                         "menu-link block relative",
                         pathname === item.pathname && "opacity-40 pointer-events-none"
                       )}
                     >
                       <span className="menu-text block text-white">{item.label}</span>
-                      <span className="menu-text block text-default absolute left-0 top-full">{item.label}</span>
-                      <span className="menu-bg absolute left-0 top-0 w-full h-full bg-default -translate-x-full z-0" />
+                      <span className="menu-text block text-accent absolute left-0 top-full">{item.label}</span>
+                      <span className="menu-bg absolute left-0 top-0 w-full h-full bg-accent -translate-x-full z-0" />
                     </Link>
                     {pathname === item.pathname && (
                       <div className="absolute top-0 left-0 w-full h-full">
@@ -285,18 +285,30 @@ export const Menu = () => {
                     key={social.id}
                     className="social-item relative overflow-hidden font-sans text-lg uppercase font-semibold tracking-tighter"
                   >
-                    <Link
-                      href={social.pathname}
-                      className="social-link block relative text-white"
-                    >
-                      <span className="block text-sm md:text-base text-white">
-                        {social.label}
+                    {social.pathname ? (
+                      <Link
+                        href={social.pathname}
+                        className="social-link block relative text-white"
+                      >
+                        <span className="block text-sm md:text-base text-white">
+                          {social.label}
+                        </span>
+                        <span className="block text-sm md:text-base text-white absolute left-0 top-full">
+                          {social.label}
+                        </span>
+                        <span className="social-bg absolute left-0 top-0 w-full h-full bg-accent -translate-x-full z-0" />
+                      </Link>
+                    ) : (
+                      <span className="social-link block relative text-white">
+                        <span className="block text-sm md:text-base text-white">
+                          {social.label}
+                        </span>
+                        <span className="block text-sm md:text-base text-white absolute left-0 top-full">
+                          {social.label}
+                        </span>
+                        <span className="social-bg absolute left-0 top-0 w-full h-full bg-accent -translate-x-full z-0" />
                       </span>
-                      <span className="block text-sm md:text-base text-white absolute left-0 top-full">
-                        {social.label}
-                      </span>
-                      <span className="social-bg absolute left-0 top-0 w-full h-full bg-default -translate-x-full z-0" />
-                    </Link>
+                    )}
                   </li>
                 ))}
               </ul>

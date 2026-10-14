@@ -1,0 +1,37 @@
+{
+  "shenzhen_2021": {
+    "title": "The panorama of Futian Shenzhen.jpg",
+    "landmark": "Futian skyline",
+    "author": "Charlie fong",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_panorama_of_Futian_Shenzhen.jpg"
+  },
+  "qingdao_2021": {
+    "title": "Qingdao Zhanqiao.jpg",
+    "landmark": "Zhanqiao Pier",
+    "author": "Vitsuha",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Qingdao_Zhanqiao.jpg"
+  },
+  "chaozhou_2021": {
+    "title": "Guangji Bridge.JPG",
+    "landmark": "Guangji Bridge",
+    "author": "\u5c0f\u6770\u6770",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guangji_Bridge.JPG"
+  },
+  "ningbo_2021": {
+    "title": "Tianyi Pavilion, Ningbo.jpg",
+    "landmark": "Tianyi Pavilion",
+    "author": "Mx. Granger",
+    "license": "CC0 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tianyi_Pavilion,_Ningbo.jpg"
+  },
+  "zhanjiang_2021": {
+    "title": "Zhanjiang - Huguang Town - P1580717 - Huguangyan Park.jpg",
+    "landmark": "Huguangyan Park",
+    "author": "Vmenkov",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zhanjiang_-_Huguang_Town_-_P1580717_-_Huguangyan_Park.jpg"
+  }
+}

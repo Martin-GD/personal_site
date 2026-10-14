@@ -1,0 +1,968 @@
+{
+  "year": "all",
+  "mode": "all",
+  "visits": [
+    {
+      "id": "shenzhen_2021",
+      "adcode": "440300",
+      "city": "Shenzhen",
+      "province": "Guangdong",
+      "date": "2021-01-01",
+      "note": "",
+      "image": "/images/footprints/2021/shenzhen_2021.jpg",
+      "coordinates": [
+        114.0579,
+        22.5431
+      ]
+    },
+    {
+      "id": "qingdao_2021",
+      "adcode": "370200",
+      "city": "Qingdao",
+      "province": "Shandong",
+      "date": "2021-02-01",
+      "note": "",
+      "image": "/images/footprints/2021/qingdao_2021.jpg",
+      "coordinates": [
+        120.3826,
+        36.0671
+      ]
+    },
+    {
+      "id": "chaozhou_2021",
+      "adcode": "445100",
+      "city": "Chaozhou",
+      "province": "Guangdong",
+      "date": "2021-03-27",
+      "note": "",
+      "image": "/images/footprints/2021/chaozhou_2021.jpg",
+      "coordinates": [
+        116.6226,
+        23.6567
+      ]
+    },
+    {
+      "id": "ningbo_2021",
+      "adcode": "330200",
+      "city": "Ningbo",
+      "province": "Zhejiang",
+      "date": "2021-08-24",
+      "note": "",
+      "image": "/images/footprints/2021/ningbo_2021.jpg",
+      "coordinates": [
+        121.5503,
+        29.8746
+      ]
+    },
+    {
+      "id": "zhanjiang_2021",
+      "adcode": "440800",
+      "city": "Zhanjiang",
+      "province": "Guangdong",
+      "date": "2021-10-03",
+      "note": "",
+      "image": "/images/footprints/2021/zhanjiang_2021.png",
+      "coordinates": [
+        110.3594,
+        21.2707
+      ]
+    },
+    {
+      "id": "wuhu_2022",
+      "adcode": "340200",
+      "city": "Wuhu",
+      "province": "Anhui",
+      "date": "2022-01-15",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        118.3765,
+        31.3263
+      ]
+    },
+    {
+      "id": "ganzhou_2022",
+      "adcode": "360700",
+      "city": "Ganzhou",
+      "province": "Jiangxi",
+      "date": "2022-01-15",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        114.935,
+        25.8311
+      ]
+    },
+    {
+      "id": "tai_an_2022",
+      "adcode": "370900",
+      "city": "Tai'an",
+      "province": "Shandong",
+      "date": "2022-07-23",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        117.0876,
+        36.2003
+      ]
+    },
+    {
+      "id": "guangzhou_2022",
+      "adcode": "440100",
+      "city": "Guangzhou",
+      "province": "Guangdong",
+      "date": "2022-10-03",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.2644,
+        23.1291
+      ]
+    },
+    {
+      "id": "dongguan_2022",
+      "adcode": "441900",
+      "city": "Dongguan",
+      "province": "Guangdong",
+      "date": "2022-10-03",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.7518,
+        23.0207
+      ]
+    },
+    {
+      "id": "shantou_2023",
+      "adcode": "440500",
+      "city": "Shantou",
+      "province": "Guangdong",
+      "date": "2023-01-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        116.682,
+        23.3541
+      ]
+    },
+    {
+      "id": "jieyang_2023",
+      "adcode": "445200",
+      "city": "Jieyang",
+      "province": "Guangdong",
+      "date": "2023-01-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        116.3728,
+        23.5497
+      ]
+    },
+    {
+      "id": "urumqi_2023",
+      "adcode": "650100",
+      "city": "Urumqi",
+      "province": "Xinjiang",
+      "date": "2023-05-12",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        87.6168,
+        43.8256
+      ]
+    },
+    {
+      "id": "changji_2023",
+      "adcode": "652300",
+      "city": "Changji Hui Autonomous Prefecture",
+      "province": "Xinjiang",
+      "date": "2023-05-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        87.304,
+        44.0146
+      ]
+    },
+    {
+      "id": "shihezi_2023",
+      "adcode": "659001",
+      "city": "Shihezi",
+      "province": "Xinjiang",
+      "date": "2023-05-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        86.0411,
+        44.3059
+      ]
+    },
+    {
+      "id": "shuanghe_2023",
+      "adcode": "659007",
+      "city": "Shuanghe",
+      "province": "Xinjiang",
+      "date": "2023-05-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        82.3537,
+        44.8405
+      ]
+    },
+    {
+      "id": "tacheng_2023",
+      "adcode": "654200",
+      "city": "Tacheng",
+      "province": "Xinjiang",
+      "date": "2023-05-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        82.9857,
+        46.7463
+      ]
+    },
+    {
+      "id": "yili_2023",
+      "adcode": "654000",
+      "city": "Yili Kazakh Autonomous Prefecture",
+      "province": "Xinjiang",
+      "date": "2023-05-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        81.3241,
+        43.9168
+      ]
+    },
+    {
+      "id": "bortala_2023",
+      "adcode": "652700",
+      "city": "Bortala Mongol Autonomous Prefecture",
+      "province": "Xinjiang",
+      "date": "2023-05-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        82.0662,
+        44.9057
+      ]
+    },
+    {
+      "id": "kekedala_2023",
+      "adcode": "659008",
+      "city": "Kokdala",
+      "province": "Xinjiang",
+      "date": "2023-05-15",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        80.9942,
+        43.94
+      ]
+    },
+    {
+      "id": "zhuhai_2023",
+      "adcode": "440400",
+      "city": "Zhuhai",
+      "province": "Guangdong",
+      "date": "2023-06-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.5767,
+        22.2707
+      ]
+    },
+    {
+      "id": "zhongshan_2023",
+      "adcode": "442000",
+      "city": "Zhongshan",
+      "province": "Guangdong",
+      "date": "2023-06-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.3928,
+        22.5176
+      ]
+    },
+    {
+      "id": "hangzhou_2023",
+      "adcode": "330100",
+      "city": "Hangzhou",
+      "province": "Zhejiang",
+      "date": "2023-07-02",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        120.1551,
+        30.2741
+      ]
+    },
+    {
+      "id": "kunming_2023",
+      "adcode": "530100",
+      "city": "Kunming",
+      "province": "Yunnan",
+      "date": "2023-09-01",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        102.8329,
+        24.8801
+      ]
+    },
+    {
+      "id": "liuzhou_2023",
+      "adcode": "450200",
+      "city": "Liuzhou",
+      "province": "Guangxi",
+      "date": "2023-09-01",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.4281,
+        24.3264
+      ]
+    },
+    {
+      "id": "yuxi_2023",
+      "adcode": "530400",
+      "city": "Yuxi",
+      "province": "Yunnan",
+      "date": "2023-09-03",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        102.5439,
+        24.3505
+      ]
+    },
+    {
+      "id": "xian_2023",
+      "adcode": "610100",
+      "city": "Xi'an",
+      "province": "Shaanxi",
+      "date": "2023-09-22",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        108.9398,
+        34.3416
+      ]
+    },
+    {
+      "id": "xianyang_2023",
+      "adcode": "610400",
+      "city": "Xianyang",
+      "province": "Shaanxi",
+      "date": "2023-09-22",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        108.7051,
+        34.3334
+      ]
+    },
+    {
+      "id": "foshan_2023",
+      "adcode": "440600",
+      "city": "Foshan",
+      "province": "Guangdong",
+      "date": "2023-10-01",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.1214,
+        23.0215
+      ]
+    },
+    {
+      "id": "hong_kong_2023",
+      "adcode": "",
+      "city": "Hong Kong",
+      "province": "Hong Kong",
+      "date": "2023-10-14",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        114.1694,
+        22.3193
+      ]
+    },
+    {
+      "id": "haikou_2024",
+      "adcode": "460100",
+      "city": "Haikou",
+      "province": "Hainan",
+      "date": "2024-01-11",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        110.3312,
+        20.0319
+      ]
+    },
+    {
+      "id": "wenchang_2024",
+      "adcode": "469005",
+      "city": "Wenchang",
+      "province": "Hainan",
+      "date": "2024-01-12",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        110.7539,
+        19.613
+      ]
+    },
+    {
+      "id": "qionghai_2024",
+      "adcode": "469002",
+      "city": "Qionghai",
+      "province": "Hainan",
+      "date": "2024-01-12",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        110.4746,
+        19.2584
+      ]
+    },
+    {
+      "id": "wanning_2024",
+      "adcode": "469006",
+      "city": "Wanning",
+      "province": "Hainan",
+      "date": "2024-01-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        110.3888,
+        18.7953
+      ]
+    },
+    {
+      "id": "lingshui_2024",
+      "adcode": "469028",
+      "city": "Lingshui Li Autonomous County",
+      "province": "Hainan",
+      "date": "2024-01-14",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        110.0375,
+        18.505
+      ]
+    },
+    {
+      "id": "sanya_2024",
+      "adcode": "460200",
+      "city": "Sanya",
+      "province": "Hainan",
+      "date": "2024-01-14",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.5083,
+        18.2479
+      ]
+    },
+    {
+      "id": "ledong_2024",
+      "adcode": "469027",
+      "city": "Ledong Li Autonomous County",
+      "province": "Hainan",
+      "date": "2024-01-15",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.1731,
+        18.7503
+      ]
+    },
+    {
+      "id": "dongfang_2024",
+      "adcode": "469007",
+      "city": "Dongfang",
+      "province": "Hainan",
+      "date": "2024-01-15",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        108.6518,
+        19.1016
+      ]
+    },
+    {
+      "id": "changjiang_2024",
+      "adcode": "469026",
+      "city": "Changjiang Li Autonomous County",
+      "province": "Hainan",
+      "date": "2024-01-16",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.055,
+        19.2986
+      ]
+    },
+    {
+      "id": "danzhou_2024",
+      "adcode": "460400",
+      "city": "Danzhou",
+      "province": "Hainan",
+      "date": "2024-01-16",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.5807,
+        19.5211
+      ]
+    },
+    {
+      "id": "baisha_2024",
+      "adcode": "469029",
+      "city": "Baisha Li Autonomous County",
+      "province": "Hainan",
+      "date": "2024-01-16",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.4526,
+        19.2246
+      ]
+    },
+    {
+      "id": "chengmai_2024",
+      "adcode": "469023",
+      "city": "Chengmai County",
+      "province": "Hainan",
+      "date": "2024-01-16",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        110.0049,
+        19.7385
+      ]
+    },
+    {
+      "id": "lingao_2024",
+      "adcode": "469024",
+      "city": "Lingao County",
+      "province": "Hainan",
+      "date": "2024-01-16",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.6905,
+        19.912
+      ]
+    },
+    {
+      "id": "suining_2024",
+      "adcode": "510900",
+      "city": "Suining",
+      "province": "Sichuan",
+      "date": "2024-01-25",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        105.5929,
+        30.5329
+      ]
+    },
+    {
+      "id": "chongqing_2024",
+      "adcode": "500100",
+      "city": "Chongqing",
+      "province": "Chongqing",
+      "date": "2024-01-25",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        106.5516,
+        29.563
+      ]
+    },
+    {
+      "id": "chengdu_2024",
+      "adcode": "510100",
+      "city": "Chengdu",
+      "province": "Sichuan",
+      "date": "2024-01-25",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        104.0665,
+        30.5723
+      ]
+    },
+    {
+      "id": "deyang_2024",
+      "adcode": "510600",
+      "city": "Deyang",
+      "province": "Sichuan",
+      "date": "2024-01-25",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        104.3979,
+        31.1269
+      ]
+    },
+    {
+      "id": "guangyuan_2024",
+      "adcode": "510800",
+      "city": "Guangyuan",
+      "province": "Sichuan",
+      "date": "2024-01-27",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        105.8434,
+        32.4355
+      ]
+    },
+    {
+      "id": "jinan_2024",
+      "adcode": "370100",
+      "city": "Jinan",
+      "province": "Shandong",
+      "date": "2024-02-07",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        117.1205,
+        36.6511
+      ]
+    },
+    {
+      "id": "weifang_2024",
+      "adcode": "370700",
+      "city": "Weifang",
+      "province": "Shandong",
+      "date": "2024-02-14",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        119.1618,
+        36.7069
+      ]
+    },
+    {
+      "id": "beijing_2024",
+      "adcode": "110100",
+      "city": "Beijing",
+      "province": "Beijing",
+      "date": "2024-03-01",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        116.4074,
+        39.9042
+      ]
+    },
+    {
+      "id": "langfang_2024",
+      "adcode": "131000",
+      "city": "Langfang",
+      "province": "Hebei",
+      "date": "2024-03-01",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        116.6838,
+        39.538
+      ]
+    },
+    {
+      "id": "huangshan_2024",
+      "adcode": "341000",
+      "city": "Huangshan",
+      "province": "Anhui",
+      "date": "2024-05-17",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        118.3173,
+        29.7092
+      ]
+    },
+    {
+      "id": "huizhou_2024",
+      "adcode": "441300",
+      "city": "Huizhou",
+      "province": "Guangdong",
+      "date": "2024-05-17",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        114.4168,
+        23.1115
+      ]
+    },
+    {
+      "id": "nanjing_2024",
+      "adcode": "320100",
+      "city": "Nanjing",
+      "province": "Jiangsu",
+      "date": "2024-10-02",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        118.7969,
+        32.0603
+      ]
+    },
+    {
+      "id": "xiamen_2024",
+      "adcode": "350200",
+      "city": "Xiamen",
+      "province": "Fujian",
+      "date": "2024-11-14",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        118.0894,
+        24.4798
+      ]
+    },
+    {
+      "id": "zhangzhou_2024",
+      "adcode": "350600",
+      "city": "Zhangzhou",
+      "province": "Fujian",
+      "date": "2024-11-14",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        117.6471,
+        24.513
+      ]
+    },
+    {
+      "id": "guiyang_2025",
+      "adcode": "520100",
+      "city": "Guiyang",
+      "province": "Guizhou",
+      "date": "2025-12-19",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        106.6302,
+        26.6477
+      ]
+    },
+    {
+      "id": "diqing_2025",
+      "adcode": "533400",
+      "city": "Diqing Tibetan Autonomous Prefecture",
+      "province": "Yunnan",
+      "date": "2025-10-02",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        99.7065,
+        27.8269
+      ]
+    },
+    {
+      "id": "qingyuan_2025",
+      "adcode": "441800",
+      "city": "Qingyuan",
+      "province": "Guangdong",
+      "date": "2025-08-30",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.056,
+        23.682
+      ]
+    },
+    {
+      "id": "changsha_2025",
+      "adcode": "430100",
+      "city": "Changsha",
+      "province": "Hunan",
+      "date": "2025-04-03",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        112.9388,
+        28.2282
+      ]
+    },
+    {
+      "id": "shanghai_2026",
+      "adcode": "310100",
+      "city": "Shanghai",
+      "province": "Shanghai",
+      "date": "2026-02-24",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        121.4737,
+        31.2304
+      ]
+    },
+    {
+      "id": "anshun_2026",
+      "adcode": "520400",
+      "city": "Anshun",
+      "province": "Guizhou",
+      "date": "2026-04-27",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        105.9476,
+        26.2531
+      ]
+    },
+    {
+      "id": "tongren_2026",
+      "adcode": "520600",
+      "city": "Tongren",
+      "province": "Guizhou",
+      "date": "2026-05-05",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        109.1916,
+        27.7183
+      ]
+    },
+    {
+      "id": "qiandongnan_2026",
+      "adcode": "522600",
+      "city": "Qiandongnan Miao and Dong Autonomous Prefecture",
+      "province": "Guizhou",
+      "date": "2026-05-05",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        107.9775,
+        26.5834
+      ]
+    },
+    {
+      "id": "qiannan_2026",
+      "adcode": "522700",
+      "city": "Qiannan Buyi and Miao Autonomous Prefecture",
+      "province": "Guizhou",
+      "date": "2026-06-13",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        107.5223,
+        26.2541
+      ]
+    },
+    {
+      "id": "macau_2026",
+      "adcode": "",
+      "city": "Macau",
+      "province": "Macau",
+      "date": "2026-06-22",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        113.5439,
+        22.1987
+      ]
+    },
+    {
+      "id": "garze_2026",
+      "adcode": "513300",
+      "city": "Garze Tibetan Autonomous Prefecture",
+      "province": "Sichuan",
+      "date": "2026-07-05",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        101.9625,
+        30.0495
+      ]
+    },
+    {
+      "id": "aba_2026",
+      "adcode": "513200",
+      "city": "Aba Tibetan and Qiang Autonomous Prefecture",
+      "province": "Sichuan",
+      "date": "2026-07-05",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        102.2247,
+        31.8994
+      ]
+    },
+    {
+      "id": "leshan_2026",
+      "adcode": "511100",
+      "city": "Leshan",
+      "province": "Sichuan",
+      "date": "2026-07-07",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        103.7656,
+        29.5521
+      ]
+    },
+    {
+      "id": "yaan_2026",
+      "adcode": "511800",
+      "city": "Ya'an",
+      "province": "Sichuan",
+      "date": "2026-07-07",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        103.0133,
+        29.9802
+      ]
+    },
+    {
+      "id": "nanchang_2026",
+      "adcode": "360100",
+      "city": "Nanchang",
+      "province": "Jiangxi",
+      "date": "2026-10-03",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        115.8582,
+        28.6829
+      ]
+    },
+    {
+      "id": "shangrao_2026",
+      "adcode": "361100",
+      "city": "Shangrao",
+      "province": "Jiangxi",
+      "date": "2026-10-03",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        117.9434,
+        28.4546
+      ]
+    },
+    {
+      "id": "jingdezhen_2026",
+      "adcode": "360200",
+      "city": "Jingdezhen",
+      "province": "Jiangxi",
+      "date": "2026-10-04",
+      "note": "",
+      "image": "",
+      "coordinates": [
+        117.1784,
+        29.2688
+      ]
+    }
+  ]
+}

@@ -6,41 +6,51 @@ export const menuList = [
   },
   {
     id: 2,
-    label: "On Track",
-    pathname: "https://landonorris.com/on-track"
+    label: "Research",
+    pathname: "https://scholar.google.com/citations?user=vYyDpIQAAAAJ&hl=zh-CN"
   },
   {
     id: 3,
-    label: "Off Track",
-    pathname: "https://landonorris.com/off-track"
+    label: "Presence",
+    pathname: "/#presence-title"
   },
   {
     id: 4,
-    label: "Calendar",
-    pathname: "https://landonorris.com/calendar"
+    label: "Places",
+    pathname: "/#calendar-title"
+  },
+  {
+    id: 5,
+    label: "Helmets",
+    pathname: "/#helmets"
   },
 ]
 
 export const socialMediaList = [
   {
     id: 1,
-    label: "TikTok",
-    pathname: "https://www.tiktok.com/@landonorris"
+    label: "Email",
+    pathname: "mailto:12011204@mail.sustech.edu.cn"
   },
   {
     id: 2,
-    label: "Instagram",
-    pathname: "https://www.instagram.com/lando"
+    label: "Redbook",
+    pathname: null
   },
   {
     id: 3,
-    label: "YouTube",
-    pathname: "https://www.youtube.com/landonorris04"
+    label: "TikTok",
+    pathname: null
   },
   {
     id: 4,
-    label: "Twitch",
-    pathname: "https://www.twitch.tv/landonorris"
+    label: "Instagram",
+    pathname: null
+  },
+  {
+    id: 5,
+    label: "YouTube",
+    pathname: null
   },
 ]
 

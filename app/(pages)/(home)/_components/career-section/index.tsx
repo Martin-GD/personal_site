@@ -124,10 +124,10 @@ export const CareerSection = () => {
   return (
     <section ref={sectionRef} className="relative w-full bg-black">
       <div className="hidden md:block absolute top-0 left-0 w-full h-full">
-        <Pattern stroke="#222" height="100%" />
+        <Pattern stroke="#243652" height="100%" />
       </div>
       <div className="md:hidden absolute top-0 left-0 w-full h-full">
-        <Pattern stroke="#555" height="100%" />
+        <Pattern stroke="#243652" height="100%" />
       </div>
       <div className="animate-pictures relative flex overflow-hidden">
         <h2 className="translate-y-13 lg:translate-y-40 2xl:translate-y-52 font-sans text-[90vw] 2xl:text-[114em] font-bold leading-none text-white">
@@ -155,7 +155,7 @@ export const CareerSection = () => {
               src={`/images/career/image-career-0${i + 1}.webp`}
               width={350}
               height={450}
-              alt="Lando Norris"
+              alt="Racing portrait"
               className="hover-image absolute opacity-0 w-35 h-35 md:w-55 md:h-50 lg:w-87.5 lg:h-112.5 object-cover"
             />
           ))}
@@ -168,13 +168,13 @@ export const CareerSection = () => {
               <span>
                 F1 Career
               </span>
-              <span className="animate-highlight absolute inset-0 block bg-default" />
+              <span className="animate-highlight absolute inset-0 block bg-accent" />
             </h3>
             <h4 className="relative md:px-3 w-fit overflow-hidden font-brier text-2xl md:text-8xl font-semibold uppercase tracking-tighter text-white">
               <span>
                 Since 2019
               </span>
-              <span className="animate-highlight absolute inset-0 block bg-default" />
+              <span className="animate-highlight absolute inset-0 block bg-accent" />
             </h4>
           </div>
           <div className="relative md:mt-10 w-full lg:w-fit order-1 md:order-2">
@@ -185,7 +185,7 @@ export const CareerSection = () => {
               alt="Career"
               className="w-full lg:w-fit"
             />
-            <span className="animate-highlight absolute inset-0 block bg-default" />
+            <span className="animate-highlight absolute inset-0 block bg-accent" />
           </div>
         </div>
         <div className="grid grid-cols-2 lg:flex-1 justify-center gap-15 md:gap-20 lg:gap-22 self-baseline md:self-auto lg:self-baseline md:select-auto">
@@ -193,11 +193,11 @@ export const CareerSection = () => {
             <div className="flex flex-col gap-1">
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Formula 1
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Wins
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
             </div>
             <div className="md:-translate-x-6">
@@ -215,11 +215,11 @@ export const CareerSection = () => {
             <div className="flex flex-col gap-1">
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Pole
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Positions
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
             </div>
             <div className="md:-translate-x-6">
@@ -237,11 +237,11 @@ export const CareerSection = () => {
             <div className="flex flex-col gap-1">
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Average
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Finish
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
             </div>
             <div className="md:-translate-x-6 flex items-start gap-4 md:gap-10">
@@ -262,11 +262,11 @@ export const CareerSection = () => {
             <div className="flex flex-col gap-1">
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Fastest
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
               <span className="relative w-fit font-sans text-xs md:text-base uppercase font-semibold tracking-tighter leading-none text-white">
                 Laps
-                <span className="animate-highlight absolute inset-0 block bg-default" />
+                <span className="animate-highlight absolute inset-0 block bg-accent" />
               </span>
             </div>
             <div className="md:-translate-x-6 flex items-start gap-10">

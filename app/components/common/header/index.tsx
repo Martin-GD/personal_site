@@ -3,7 +3,7 @@ import gsap from "gsap"
 import clsx from "clsx"
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import { useMenuStore, useSectionState } from "@/app/store"
+import { useMenuStore } from "@/app/store"
 import { Logo } from "../vectors/logo"
 import Link from "next/link"
 
@@ -46,7 +46,7 @@ export const Header = () => {
       gsap.to(topLineRef.current, {
         y: 0,
         rotation: 0,
-        backgroundColor: "#000",
+        backgroundColor: "#1748d6",
         duration: 0.35,
         ease: "power2.out"
       })
@@ -54,7 +54,7 @@ export const Header = () => {
       gsap.to(bottomLineRef.current, {
         y: 0,
         rotation: 0,
-        backgroundColor: "#000",
+        backgroundColor: "#1748d6",
         duration: 0.35,
         ease: "power2.out"
       })
@@ -66,13 +66,15 @@ export const Header = () => {
       "px-6 w-full h-30 flex justify-between items-center bg-transparent z-999",
       open ? "fixed" : "absolute"
     )}>
-      <Link href="/">
-        <Logo width="180" height="90" fill="#000" />
+      <Link href="/" aria-label="Mingdao Gong home">
+        <Logo width="190" height="64" fill="var(--color-default)" />
       </Link>
       <div className="flex items-center gap-x-2">
         <button
           type="button"
           aria-label="menu"
+          aria-expanded={open}
+          aria-controls="site-menu"
           onClick={handleMenuOpen}
           className={clsx(
             "w-18 h-14 flex flex-col justify-center items-center gap-2",
@@ -81,11 +83,11 @@ export const Header = () => {
         >
           <div
             ref={topLineRef}
-            className="w-6 h-0.75 bg-black"
+            className="w-6 h-0.75 bg-default"
           />
           <div
             ref={bottomLineRef}
-            className="w-6 h-0.75 bg-bg-black"
+            className="w-6 h-0.75 bg-default"
           />
         </button>
       </div>

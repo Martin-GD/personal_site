@@ -11,25 +11,16 @@ export const HelmetsSection = () => {
 
   return (
     <section
-      className="my-30 w-full bg-black overflow-hidden"
+      id="helmets"
+      className="mt-0 mb-30 w-full bg-white overflow-hidden"
       onClick={() => setActiveId(null)}
     >
-      <div>
-        <Image
-          src="/images/pre-loader/image-pre-loader-01.webp"
-          width={3000}
-          height={2000}
-          alt=""
-          className="w-dvw h-dvh object-cover"
-          priority
-        />
-      </div>
       <div className="relative py-10 lg:py-40 px-5">
         <div className="hidden md:block absolute left-0 top-0 w-full h-full">
-          <Pattern height="100%" stroke="#222" />
+          <Pattern height="100%" stroke="var(--color-line)" />
         </div>
         <div className="md:hidden absolute left-0 top-0 w-full h-full">
-          <Pattern height="40%" stroke="#555" />
+          <Pattern height="40%" stroke="var(--color-line)" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
           {helmetsList.map((helmet) => {
@@ -45,10 +36,10 @@ export const HelmetsSection = () => {
               >
                 <div className="relative overflow-hidden z-10">
                   <div className="hidden md:block">
-                    <Grid width="100%" height="100%" stroke="#222" />
+                    <Grid width="100%" height="100%" stroke="var(--color-line)" />
                   </div>
                   <div className="md:hidden">
-                    <Grid width="100%" height="100%" stroke="#555" />
+                    <Grid width="100%" height="100%" stroke="var(--color-line)" />
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -76,7 +67,7 @@ export const HelmetsSection = () => {
                   />
                 </div>
                 <div className="absolute bottom-0 right-0 z-30 p-2">
-                  <p className="font-sans text-sm 2xl:text-base font-bold text-white">
+                  <p className="font-sans text-sm 2xl:text-base font-bold text-black">
                     {helmet.label}
                     <strong className="ml-1 text-default">
                       {helmet.year}

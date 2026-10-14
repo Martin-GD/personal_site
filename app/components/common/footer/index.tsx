@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react"
 import Image from "next/image"
 import Link from "next/link"
 import { Pattern } from "../vectors/pattern"
-import { Signature } from "../vectors/signature"
+import { GMark } from "../vectors/g-mark"
 import { MenuLine } from "../vectors/menu-line"
 import { menuList, socialMediaList } from "@/app/constants"
 import { BrandRalphLauren } from "@/app/components/common/vectors/brands/brand-ralph-lauren"
@@ -90,7 +90,7 @@ export const Footer = () => {
     const content = contentRef.current
 
     let direction = 1
-    let speed = 0.4
+    const speed = 0.4
     let x = 0
 
     const contentWidth = content.offsetWidth
@@ -129,9 +129,9 @@ export const Footer = () => {
   }, [])
 
   return (
-    <footer className="relative w-full p-5 pb-20 2xl:pb-5 md:pt-50 xl:pt-70 bg-default footer-root">
+    <footer className="relative w-full p-5 pb-20 2xl:pb-5 md:pt-50 xl:pt-70 bg-white footer-root">
       <div className="w-full h-full flex flex-col justify-center items-center">
-        <div className="relative w-full rounded-lg bg-black overflow-hidden
+        <div className="relative w-full rounded-lg bg-default overflow-hidden
           aspect-[1688/3480] md:aspect-[1688/2466] lg:aspect-[1688/1620] xl:aspect-[1688/1400] 2xl:aspect-[1688/896]
           [--mask-url:url(/svgs/image-bg.svg)]
           [-webkit-mask-image:var(--mask-url)]
@@ -146,34 +146,34 @@ export const Footer = () => {
         >
           <div className="absolute w-full h-full">
             <div className="lg:hidden">
-              <Pattern height="140dvh" stroke="#555" />
+              <Pattern height="140dvh" stroke="#3865df" />
             </div>
           </div>
           <div className="absolute inset-0 -z-1 overflow-hidden">
             <div className="hidden lg:block overflow-hidden">
-              <Pattern width="100dvw" stroke="#222" />
+              <Pattern width="100dvw" stroke="#3865df" />
             </div>
           </div>
           <div className="absolute bottom-0 w-full flex flex-col justify-center items-center">
             <div className="absolute -top-40 md:-top-50 lg:-top-58 flex flex-col items-center uppercase">
-              <div className="-rotate-12 translate-y-6">
-                <Signature width="250" height="120" color="#d2ff00" />
+              <div className="mb-4">
+                <GMark width="104" height="104" className="text-white" />
               </div>
               <div className="flex flex-col items-center">
-                <h1 className="font-sans text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-7 md:leading-14 text-white">
-                  Always <span className="font-brier text-default">bringing</span>
-                </h1>
-                <h1 className="font-sans text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none text-white">
-                  The <span className="font-brier text-default">fight</span>.
-                </h1>
+                <h2 className="font-sans text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-7 md:leading-14 text-white">
+                  Always <span className="font-brier text-accent">chasing</span>
+                </h2>
+                <h2 className="font-sans text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none text-white">
+                  The <span className="font-brier text-accent">next horizon</span>.
+                </h2>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/images/footer/image-footer.webp"
+                src="/images/hero/mingdao-race-helmet-upper.png"
                 width={800}
                 height={600}
-                alt="Lando Norris"
+                alt="Mingdao Gong wearing a racing helmet"
                 className="w-full h-[40dvh] md:w-190 md:h-170 object-cover drop-shadow-2xl brightness-75"
               />
             </div>
@@ -193,15 +193,15 @@ export const Footer = () => {
                 >
                   <Link
                     href={item.pathname}
-                    target="_blank"
+                    target={item.pathname.startsWith("http") ? "_blank" : undefined}
                     className={clsx(
                       "menu-link block relative",
                       pathname === item.pathname && "opacity-40 pointer-events-none"
                     )}
                   >
                     <span className="menu-text block text-white">{item.label}</span>
-                    <span className="menu-text block text-default absolute left-0 top-full">{item.label}</span>
-                    <span className="menu-bg absolute left-0 top-0 w-full h-full bg-default -translate-x-full z-0" />
+                    <span className="menu-text block text-accent absolute left-0 top-full">{item.label}</span>
+                    <span className="menu-bg absolute left-0 top-0 w-full h-full bg-accent -translate-x-full z-0" />
                   </Link>
                   {pathname === item.pathname && (
                     <div className="absolute top-0 left-0 w-full h-full">
@@ -211,7 +211,7 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>%
+          </div>
           <div className="absolute top-[15%] md:top-[60%] md:-translate-y-[60%] right-10 md:right-[5%] xl:right-[7%] 2xl:right-[10%] w-fit">
             <h6 className="font-sans text-xs font-semibold uppercase text-center text-white">
               Follow on
@@ -225,14 +225,22 @@ export const Footer = () => {
                     pathname === item.pathname && "is-active"
                   )}
                 >
-                  <Link
-                    href={item.pathname}
-                    target="_blank"
-                    className="menu-link block relative">
-                    <span className="menu-text block text-white">{item.label}</span>
-                    <span className="menu-text block text-default absolute left-0 top-full">{item.label}</span>
-                    <span className="menu-bg absolute left-0 top-0 w-full h-full bg-default -translate-x-full z-0" />
-                  </Link>
+                  {item.pathname ? (
+                    <Link
+                      href={item.pathname}
+                      target={item.pathname.startsWith("http") ? "_blank" : undefined}
+                      className="menu-link block relative">
+                      <span className="menu-text block text-white">{item.label}</span>
+                      <span className="menu-text block text-accent absolute left-0 top-full">{item.label}</span>
+                      <span className="menu-bg absolute left-0 top-0 w-full h-full bg-accent -translate-x-full z-0" />
+                    </Link>
+                  ) : (
+                    <span className="menu-link block relative">
+                      <span className="menu-text block text-white">{item.label}</span>
+                      <span className="menu-text block text-accent absolute left-0 top-full">{item.label}</span>
+                      <span className="menu-bg absolute left-0 top-0 w-full h-full bg-accent -translate-x-full z-0" />
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -243,32 +251,32 @@ export const Footer = () => {
                 ref={contentRef}
                 className="flex items-center gap-12 md:gap-16 2xl:gap-20 pr-20 scale-50 md:scale-75 lg:scale-100"
               >
-                <BrandRalphLauren width="200" height="100" fill="#d2ff00" />
-                <BrandMonster width="200" height="100" fill="#d2ff00" />
-                <BrandUber width="140" height="100" fill="#d2ff00" />
-                <BrandMind width="140" height="100" fill="#d2ff00" />
-                <BrandPlaystation width="60" height="60" fill="#d2ff00" />
-                <BrandGoogle width="140" height="60" fill="#d2ff00" />
-                <BrandAndroid width="140" height="60" fill="#d2ff00" />
-                <BrandQuadrant width="220" height="60" fill="#d2ff00" />
-                <BrandInKart width="100" height="60" fill="#d2ff00" />
-                <BrandPureEletric width="110" height="80" fill="#d2ff00" />
-                <BrandTumi width="140" height="80" fill="#d2ff00" />
-                <BrandHilton width="140" height="100" fill="#d2ff00" />
+                <BrandRalphLauren width="200" height="100" fill="var(--color-accent)" />
+                <BrandMonster width="200" height="100" fill="var(--color-accent)" />
+                <BrandUber width="140" height="100" fill="var(--color-accent)" />
+                <BrandMind width="140" height="100" fill="var(--color-accent)" />
+                <BrandPlaystation width="60" height="60" fill="var(--color-accent)" />
+                <BrandGoogle width="140" height="60" fill="var(--color-accent)" />
+                <BrandAndroid width="140" height="60" fill="var(--color-accent)" />
+                <BrandQuadrant width="220" height="60" fill="var(--color-accent)" />
+                <BrandInKart width="100" height="60" fill="var(--color-accent)" />
+                <BrandPureEletric width="110" height="80" fill="var(--color-accent)" />
+                <BrandTumi width="140" height="80" fill="var(--color-accent)" />
+                <BrandHilton width="140" height="100" fill="var(--color-accent)" />
               </div>
               <div className="flex items-center gap-12 md:gap-16 2xl:gap-20 pr-20">
-                <BrandRalphLauren width="200" height="100" fill="#d2ff00" />
-                <BrandMonster width="200" height="100" fill="#d2ff00" />
-                <BrandUber width="140" height="100" fill="#d2ff00" />
-                <BrandMind width="140" height="100" fill="#d2ff00" />
-                <BrandPlaystation width="60" height="60" fill="#d2ff00" />
-                <BrandGoogle width="140" height="60" fill="#d2ff00" />
-                <BrandAndroid width="140" height="60" fill="#d2ff00" />
-                <BrandQuadrant width="220" height="60" fill="#d2ff00" />
-                <BrandInKart width="100" height="60" fill="#d2ff00" />
-                <BrandPureEletric width="110" height="80" fill="#d2ff00" />
-                <BrandTumi width="140" height="80" fill="#d2ff00" />
-                <BrandHilton width="140" height="100" fill="#d2ff00" />
+                <BrandRalphLauren width="200" height="100" fill="var(--color-accent)" />
+                <BrandMonster width="200" height="100" fill="var(--color-accent)" />
+                <BrandUber width="140" height="100" fill="var(--color-accent)" />
+                <BrandMind width="140" height="100" fill="var(--color-accent)" />
+                <BrandPlaystation width="60" height="60" fill="var(--color-accent)" />
+                <BrandGoogle width="140" height="60" fill="var(--color-accent)" />
+                <BrandAndroid width="140" height="60" fill="var(--color-accent)" />
+                <BrandQuadrant width="220" height="60" fill="var(--color-accent)" />
+                <BrandInKart width="100" height="60" fill="var(--color-accent)" />
+                <BrandPureEletric width="110" height="80" fill="var(--color-accent)" />
+                <BrandTumi width="140" height="80" fill="var(--color-accent)" />
+                <BrandHilton width="140" height="100" fill="var(--color-accent)" />
               </div>
             </div>
           </div>
@@ -276,7 +284,7 @@ export const Footer = () => {
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 md:left-5 md:translate-x-0 bottom-4 md:bottom-5 w-full md:w-fit z-999">
         <p className="font-sans text-sm text-center text-black">
-          <strong>© 2026 Lando Norris</strong>. All rights reserved
+          <strong>© 2026 Mingdao Gong</strong>. All rights reserved
         </p>
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:right-5 md:translate-x-0 bottom-12 md:bottom-5 w-full md:w-fit z-999">

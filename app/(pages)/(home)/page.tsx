@@ -1,6 +1,5 @@
 import { HeroSection } from "./_components/hero-section"
-import { CareerSection } from "./_components/career-section"
-import { OnTrackSection } from "./_components/on-track"
+import { ResearchSection } from "./_components/research-section"
 import { CalendarSection } from "./_components/calendar-section"
 import { HelmetsSection } from "./_components/helmets-section"
 import { PartnersSection } from "./_components/partners-section"
@@ -10,8 +9,7 @@ const HomePage = () => {
     <main className="w-full">
       <HeroSection />
       <div className="relative -mt-1 z-10">
-        <CareerSection />
-        <OnTrackSection />
+        <ResearchSection />
         <PartnersSection />
         <CalendarSection />
         <HelmetsSection />

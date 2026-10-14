@@ -1,3 +1,15 @@
+## Mingdao Gong: Personalization Preview
+
+Step 1 replaces the display name, loading mark, header branding, favicon, and UI palette with Mingdao Gong and a blue/white G identity. Existing animations are retained.
+
+This is a local design draft. The original racing photos, statistics, stories, sponsor marks, and outbound links are still template content, not Mingdao Gong's biography or affiliations. They will be personalized separately. Original project credits are preserved below.
+
+```sh
+npm run dev -- --hostname 0.0.0.0 --port 3000
+```
+
+Open `http://localhost:3000` on the server, or `http://<server-ip>:3000` from a reachable device. Use another port when 3000 is occupied.
+
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://github.com/BrunoCarvalhoFeitosa/lando-norris">
